@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Muni Bajracharya | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Amit Muni Bajracharya</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header id="home">
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-img-container">
+                    <img src="profile.jpeg" alt="Amit Muni Bajracharya" class="profile-img">
+                    <div class="profile-img-border"></div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="fade-in">Amit Muni Bajracharya</h1>
+                    <p class="fade-in-delay">Backend-Focused & Full-Stack Mobile Developer</p>
+                    <p class="fade-in-delay-2">Node.js, Express & Flutter Developer</p>
+                    <div class="buttons fade-in-delay-3">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                    <div class="social-links fade-in-delay-4">
+                        <a href="https://github.com/Amit-Bajracharya" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/amit-bajracharya" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/Amit.Bajracharya" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/amitbajracharya_" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:amitbajracharya4444@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I am a Bachelor of Computer Applications (BCA) student at NCCS, Kathmandu, with a strong foundation in backend development and mobile application development. I have solid knowledge of Node.js, Express.js, and MongoDB for building RESTful APIs and server-side solutions. My skills in Flutter and Dart allow me to create cross-platform mobile applications with API integration and offline functionality.</p>
+        <ul>
+            <li>Knowledgeable in backend development with Node.js & Express.js</li>
+            <li>Proficient in mobile development using Flutter & Dart</li>
+            <li>Strong understanding of database management (MongoDB, SQLite, Firebase)</li>
+            <li>Experienced with RESTful API design and implementation</li>
+            <li>Skilled in full-stack web development (PHP, MySQL, HTML/CSS)</li>
+            <li>Proficient with version control using Git & GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Node.js, Express.js, MongoDB, RESTful APIs</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="90"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>Flutter, Dart, Firebase, SQLite</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="85"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Web Technologies</h3>
+                <p>HTML5, CSS, PHP, MySQL</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="80"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming Languages</h3>
+                <p>JavaScript, Python, Java, C#</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="85"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>APIs & Tools</h3>
+                <p>Git & GitHub, Postman, Google Maps API, News API, Khalti Payment Gateway</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-skill="88"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">All Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Assemble_X – PC Builder App</h3>
+                <p>A PC build mobile application with intelligent algorithms for component compatibility and recommendations.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Intelligent algorithm for PC component compatibility checking</li>
+                        <li>Component recommendation system based on user requirements</li>
+                        <li>Mobile-first design with Flutter framework</li>
+                        <li>Real-time price comparison and availability tracking</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Flutter</span>
+                    <span>Algorithms</span>
+                    <span>Dart</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h3>News Website</h3>
+                <p>Full-stack news website focusing on backend development and API integration using Node.js, Express, and MongoDB.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>RESTful API design for news data management</li>
+                        <li>Real-time news aggregation from multiple sources</li>
+                        <li>Category-based news filtering and search functionality</li>
+                        <li>Responsive web design with dynamic content loading</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>API</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Vibe Finder – Mood-Based Place Recommender</h3>
+                <p>A mood-based place recommendation mobile app that suggests locations based on user's current emotional state.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Mood detection through user input and preferences</li>
+                        <li>Integration with Google Maps API for location services</li>
+                        <li>Personalized recommendation algorithm</li>
+                        <li>Weather and news API integration for enhanced suggestions</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Flutter</span>
+                    <span>Maps API</span>
+                    <span>Dart</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Helmet Mandu – E-commerce Clone</h3>
+                <p>Clone mobile app of the official Helmet Mandu Store with Firebase integration and Flutter providers for state management.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Product catalog with search and filter functionality</li>
+                        <li>Shopping cart and checkout system</li>
+                        <li>User authentication and profile management</li>
+                        <li>Firebase backend for real-time data synchronization</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>Providers</span>
+                    <span>Dart</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+                <h3>Weather App</h3>
+                <p>Mobile application that tracks upcoming weather conditions and forecasts using real-time weather API integration.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Real-time weather data from weather API</li>
+                        <li>7-day weather forecast with detailed information</li>
+                        <li>Location-based weather updates</li>
+                        <li>Beautiful UI with weather animations and icons</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Flutter</span>
+                    <span>Weather API</span>
+                    <span>Dart</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>PC-ZONE – E-commerce Website</h3>
+                <p>E-commerce website where users and administrators can interact with each other through basic CRUD operations.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>User and admin dashboard with different access levels</li>
+                        <li>Product management system with image uploads</li>
+                        <li>Shopping cart and order management</li>
+                        <li>Secure payment integration and order tracking</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Cloud Art Gallery – E-commerce Platform</h3>
+                <p>E-commerce website for art sales with user-admin interaction, CRUD operations, and Khalti payment gateway integration.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Art gallery with high-quality image display</li>
+                        <li>Artist and artwork management system</li>
+                        <li>Khalti payment gateway integration for Nepali market</li>
+                        <li>Admin panel for inventory and order management</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Khalti API</span>
+                    <span>CRUD</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Wander-Yay – Travel E-commerce</h3>
+                <p>Travel e-commerce website where users can browse and purchase travel packages for various destinations.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Travel package catalog with detailed itineraries</li>
+                        <li>Destination search and filtering options</li>
+                        <li>Booking system with payment integration</li>
+                        <li>User reviews and rating system for packages</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>E-commerce</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Techno-Zone – PC Component Review Platform</h3>
+                <p>Review website where users can view PC components, leave reviews, and comment on parts with an easy-to-use interface.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Component database with specifications and images</li>
+                        <li>User review and rating system</li>
+                        <li>Comment section for community interaction</li>
+                        <li>Search and filter functionality for components</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="project-card" onclick="toggleProjectDetails(this)">
+                <div class="project-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>CRUD Operations – Node.js & Express</h3>
+                <p>Basic CRUD operations implementation using Node.js and Express with MongoDB as the database backend.</p>
+                <div class="project-details" style="display: none;">
+                    <ul>
+                        <li>Complete CRUD operations (Create, Read, Update, Delete)</li>
+                        <li>RESTful API endpoints with proper HTTP methods</li>
+                        <li>Data validation and error handling</li>
+                        <li>MongoDB integration for data persistence</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>REST API</span>
+                </div>
+            </div>
+        </div>
+        <div class="github-link">
+            <p>Explore all repositories on <a href="https://github.com/Amit-Bajracharya" target="_blank">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <p><strong>Backend Developer:</strong> Node.js, Express.js, MongoDB, RESTful APIs, Git & GitHub, problem-solving.</p>
+        <p><strong>Flutter Mobile Developer:</strong> Flutter, Dart, Firebase, SQLite, API integration, offline storage.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Email: <a href="mailto:amitbajracharya4444@gmail.com">amitbajracharya4444@gmail.com</a></p>
+        <p>Phone: 9863252012</p>
+        <p>GitHub: <a href="https://github.com/Amit-Bajracharya" target="_blank">github.com/Amit-Bajracharya</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/amit-bajracharya" target="_blank">linkedin.com/in/amit-bajracharya</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/Amit.Bajracharya" target="_blank">facebook.com/Amit.Bajracharya</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/amitbajracharya_" target="_blank">instagram.com/amitbajracharya_</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Amit Muni Bajracharya. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
