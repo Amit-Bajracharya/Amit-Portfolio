@@ -54,6 +54,41 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// Animate stat counters when About section is visible
+const aboutSection = document.querySelector('#about');
+if (aboutSection) {
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statValues = aboutSection.querySelectorAll('.stat-value[data-count]');
+                statValues.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    animateCounter(stat, target);
+                });
+                statObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    statObserver.observe(aboutSection);
+}
+
+function animateCounter(element, target) {
+    let current = 0;
+    const duration = 1500;
+    const step = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -228,23 +263,24 @@ function toggleProjectDetails(card) {
 }
 
 // Image slider functionality
-function changeSlide(button, direction) {
-    const slider = button.parentElement.previousElementSibling;
+function changeSlide(event, button, direction) {
+    event.stopPropagation(); // Prevent card click
+    const slider = button.closest('.project-slider').querySelector('.slider-container');
     const images = slider.querySelectorAll('.slide-image');
     const totalImages = images.length;
-    
-    if (totalImages === 0) return; // No images to slide
-    
+
+    if (totalImages === 0) return;
+
     let currentIndex = 0;
     images.forEach((img, index) => {
         if (img.classList.contains('active')) {
             currentIndex = index;
         }
     });
-    
+
     // Remove active class from current image
     images.forEach(img => img.classList.remove('active'));
-    
+
     // Calculate new index with wraparound
     let newIndex = currentIndex + direction;
     if (newIndex < 0) {
@@ -252,10 +288,7 @@ function changeSlide(button, direction) {
     } else if (newIndex >= totalImages) {
         newIndex = 0;
     }
-    
+
     // Add active class to new image
     images[newIndex].classList.add('active');
-    
-    // Move slider container
-    slider.style.transform = `translateX(-${newIndex * 100}%)`;
 }
